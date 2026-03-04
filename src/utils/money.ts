@@ -20,12 +20,12 @@ export function roundToInt(value: number): number {
   return value >= 0 ? Math.floor(value + 0.5) : Math.ceil(value - 0.5);
 }
 
-/** Format cents as a string with two decimal places. */
-export function formatCents(cents: number): string {
-  return (cents / 100).toFixed(2);
+/** Convert cents to dollars. */
+export function centsToDollars(cents: number): number {
+  return cents / 100;
 }
 
 /** Convert dollars to cents (rounding to nearest integer). */
-export function dollars(value: number): number {
+export function dollarsToCents(value: number): number {
   return Math.round(value * 100);
 }
